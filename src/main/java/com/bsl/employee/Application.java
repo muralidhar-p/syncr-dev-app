@@ -44,10 +44,10 @@ public class Application {
 			SdkMeterProvider.builder()
 				.setResource(
 					Resource.getDefault().toBuilder()
-						.put("service.name", "micrometer-shim")
+						.put("service.name", "syf-dev-app")
 						// Include instrumentation.provider=micrometer to enable micrometer metrics
 						// experience in New Relic
-						.put("instrumentation.provider", "syf-dev-app")
+						.put("instrumentation.provider", "micrometer")
 						.build())
 				.registerMetricReader(
 					PeriodicMetricReader.builder(
